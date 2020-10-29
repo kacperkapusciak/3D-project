@@ -6,6 +6,7 @@ const palette = {
   white: 0xf0f4eb,
   brown: 0xb17339,
   blue: 0x178afc,
+  background: 0xe5e5e5,
 };
 
 export default palette;
