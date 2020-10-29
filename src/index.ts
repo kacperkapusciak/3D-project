@@ -1,29 +1,27 @@
 import * as THREE from 'three';
 import './index.css';
+import { Ground, Player } from './objects';
 
 document.body.classList.add('body');
 
+//scene and camera setup
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new Player();
 
-const renderer = new THREE.WebGLRenderer();
+// rendered setup
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.domElement.classList.add('renderer');
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor('#e5e5e5');
+
 document.body.appendChild(renderer.domElement);
 
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+scene.add(new Ground());
 
 camera.position.z = 5;
 
-const animate = function () {
+const animate = () => {
   requestAnimationFrame(animate);
-
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-
   renderer.render(scene, camera);
 };
 
