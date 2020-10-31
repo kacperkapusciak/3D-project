@@ -5,7 +5,7 @@ export class Player extends THREE.PerspectiveCamera {
     super(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     this.register();
 
-    this.position.set(0, this.height, 0);
+    this.position.set(0, this.height, 10);
     this.rotation.order = 'YXZ';
   }
 
@@ -41,7 +41,7 @@ export class Player extends THREE.PerspectiveCamera {
       case 'Space':
         this.position.y += this.speed;
         break;
-      case 'ShiftLeft':
+      case 'KeyC':
         this.position.y -= this.speed;
         break;
     }
@@ -56,7 +56,7 @@ export class Player extends THREE.PerspectiveCamera {
   };
 
   private moveView = (event: MouseEvent) => {
-    this.rotation.x -= event.movementY / 200;
-    this.rotation.y -= event.movementX / 200;
+    this.rotation.x -= event.movementY / 300;
+    this.rotation.y -= event.movementX / 300;
   };
 }

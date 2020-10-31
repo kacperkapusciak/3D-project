@@ -4,8 +4,8 @@ import palette from '../palette';
 export class Ground extends THREE.Object3D {
   constructor() {
     super();
-    const geometry = new THREE.PlaneGeometry(10, 10);
-    const material = new THREE.MeshBasicMaterial({ color: palette.green.light });
+    const geometry = new THREE.PlaneGeometry(40, 40);
+    const material = new THREE.MeshStandardMaterial({ color: palette.orange[500] });
     const ground = new THREE.Mesh(geometry, material);
     ground.castShadow = true;
     ground.receiveShadow = true;
