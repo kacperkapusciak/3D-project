@@ -11,6 +11,7 @@ export class HUD extends HTMLElement {
       Use Mouse to look around
       Press Space to fly
       Press C to descend
+      Press ESC to release Mouse
     `;
 
     const style = document.createElement('style');
