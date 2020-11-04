@@ -5,8 +5,12 @@ export class Player extends THREE.PerspectiveCamera {
     super(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     this.register();
 
-    this.position.set(0, this.height, 10);
+    this.position.set(10, this.height, 0);
+    this.rotateY(Math.PI / 2);
     this.rotation.order = 'YXZ';
+
+    const hud = document.createElement('hud-element');
+    document.body.appendChild(hud);
   }
 
   private height = 1.8;

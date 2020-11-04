@@ -27,7 +27,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
-      title: 'Three JS Project',
+      title: 'Park alley at night',
     }),
   ],
   output: {
