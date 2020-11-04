@@ -20,8 +20,6 @@ export class StreetLamp extends THREE.Object3D {
     this.add(head);
     this.add(hat);
 
-    this.add(new DirectionalLight(-x, 5 * segment, -z, 0.5));
-
     this.castShadow = true;
     this.receiveShadow = true;
   }
