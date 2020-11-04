@@ -50,6 +50,7 @@ const palette = {
     '700': 0x606873,
     '900': 0x3e4750,
   },
+  black: 0x111,
 };
 
 export default palette;

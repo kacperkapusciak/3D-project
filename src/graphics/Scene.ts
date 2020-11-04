@@ -1,18 +1,22 @@
 import * as THREE from 'three';
-import { DirectionalLight, HemisphereLight } from '.';
-import { Ground, Pine } from '../models';
+import { HemisphereLight } from '.';
+import { Ground, Pine, Path, StreetLamp, Bench } from '../models';
 
 export class Scene extends THREE.Scene {
   constructor() {
     super();
+
     this.add(new Ground());
-    this.add(new Pine());
+    this.add(new Path());
+
+    this.add(new Bench(0, -1.5));
+
+    this.add(new StreetLamp(8, -3.2));
+    this.add(new StreetLamp(-8, -3.2));
+
+    this.add(new Pine(-4, 6));
+    this.add(new Pine(15, 14, 0.6));
 
     this.add(new HemisphereLight());
-
-    // three point light setup
-    this.add(new DirectionalLight(40, 75, 0.5));
-    this.add(new DirectionalLight(-40, -50, 0.08));
-    this.add(new DirectionalLight(40, -70, 0.04));
   }
 }

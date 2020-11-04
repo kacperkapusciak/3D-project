@@ -1,3 +1,4 @@
+export * from './HUD';
 export * from './Scene';
 export * from './Player';
 export * from './Renderer';

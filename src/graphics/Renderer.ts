@@ -6,8 +6,9 @@ export class Renderer extends THREE.WebGLRenderer {
     super({ antialias: true });
 
     this.setSize(window.innerWidth, window.innerHeight);
-    this.setClearColor(palette.gray[100]);
+    this.setClearColor(palette.black);
     this.shadowMap.enabled = true;
+    this.shadowMap.type = THREE.PCFSoftShadowMap;
 
     this.domElement.onclick = () => {
       this.domElement.requestPointerLock();
