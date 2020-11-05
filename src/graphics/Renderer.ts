@@ -3,12 +3,11 @@ import palette from '../palette';
 
 export class Renderer extends THREE.WebGLRenderer {
   constructor() {
-    super({ antialias: true });
+    super({ alpha: true, antialias: true });
 
     this.setSize(window.innerWidth, window.innerHeight);
     this.setClearColor(palette.black);
     this.shadowMap.enabled = true;
-    this.shadowMap.type = THREE.PCFSoftShadowMap;
 
     this.domElement.onclick = () => {
       this.domElement.requestPointerLock();

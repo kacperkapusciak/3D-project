@@ -18,7 +18,7 @@ export class Cylinder extends THREE.Object3D {
       color,
       flatShading: true,
       emissive: isEmissive ? color : 0x000,
-      emissiveIntensity: 1000,
+      emissiveIntensity: 1.25,
     });
     const cylinder = new THREE.Mesh(geometry, material);
     cylinder.castShadow = true;
