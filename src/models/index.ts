@@ -6,3 +6,5 @@ export * from './Bench';
 export * from './Moon';
 export * from './Bush';
 export * from './BigBush';
+export * from './Oak';
+export * from './Mushroom';

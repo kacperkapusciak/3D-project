@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { DirectionalLight, HemisphereLight } from '.';
-import { Ground, Pine, Path, StreetLamp, Bench, Moon, Bush, BigBush } from '../models';
+import { Ground, Pine, Path, StreetLamp, Bench, Moon, Bush, BigBush, Oak, Mushroom, MushroomType } from '../models';
 
 export class Scene extends THREE.Scene {
   constructor() {
@@ -19,6 +19,11 @@ export class Scene extends THREE.Scene {
 
     this.add(new Bush(4.5, 5));
     this.add(new BigBush(-5, -8));
+
+    this.add(new Oak(7, -9));
+
+    this.add(new Mushroom(1, 7, MushroomType.brown));
+    this.add(new Mushroom(-8, -6, MushroomType.red));
 
     this.add(new Moon());
     this.add(new DirectionalLight());
